@@ -5,95 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #432E54;
-        }
-
-        .container {
-            background-color: #4B4376;
-            box-shadow: 0 0 5px 20px #857db4;
-            border-radius: 15px;
-            width: 500px;
-            min-height: 400px;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .title {
-            position: absolute;
-            top: 20px;
-            font-size: 3rem;
-        }
-
-        .inputs {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 80px;
-        }
-
-        input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
-            border: 1px solid grey;
-            outline: none;
-        }
-        .buttons{
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        button {
-            color: white;
-            padding: 10px;
-            width: auto;
-            min-width: 100%;
-            /* margin: 10px; */
-            background-color: #AE445A;
-            outline: none;
-            border-radius: 8%;
-            cursor: pointer;
-        }
-
-        #result {
-            position: relative;
-            border-radius: 10px;
-            color: #E8BCB9;
-            width: 100%;
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-            padding: 10px;
-            font-size: 2rem;
-        }
-
-        .resImage {
-            border-radius: 10px;
-            width: 100%;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -113,31 +25,6 @@
     </div>
 </body>
 
-
-<script>
-    function getBMI() {
-        const heightCM = document.getElementById('inputHeight').value;
-        const weight = document.getElementById('inputWeight').value
-
-        if (heightCM != "" && weight != "") {
-            heightM = heightCM / 100;
-            const bmi = Math.round((weight / (heightM * heightM)) * 10) / 10;
-            console.log(`${bmi}`);
-
-            result.innerHTML = `
-            <h3>Your BMI is :</h3>
-            <h2>${bmi}</h2>
-            <img class="resImage" src="./Media/body-mass-index-scale-infographics-of-underweight-and-normal-weight-vector.jpg" alt="">
-        `
-        } else { alert("Please enter both values") }
-    }
-
-    function clearValue(){
-        document.getElementById('inputHeight').value=""
-        document.getElementById('inputWeight').value=""
-        document.getElementById('result').innerHTML=""
-    }
-
-</script>
+<script src="./main.js"></script>
 
 </html>
